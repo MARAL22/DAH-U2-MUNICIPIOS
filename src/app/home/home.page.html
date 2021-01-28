@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            Municipios Nayarit
+
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-card *ngFor="let mun of municipios">
+        <img src="{{mun.url}}">
+
+        <ion-card-header>
+            <ion-card-subtitle>{{mun.municipio}}</ion-card-subtitle>
+            <ion-card-title>{{mun.loc}}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <p style="text-align: justify">{{mun.info}}</p>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>
